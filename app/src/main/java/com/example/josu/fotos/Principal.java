@@ -3,7 +3,6 @@ package com.example.josu.fotos;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -33,16 +32,14 @@ public class Principal extends Activity {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 if (cursor.moveToPosition(position)) {
                     Foto f = GestorFoto.getRow(cursor);
-                    maximizar(f, position);
+                    maximizar(position);
                 }
             }
         });
     }
 
-    public void maximizar(Foto f, int position){
+    public void maximizar(int position){
         Intent intent = new Intent(this, PantallaCompleta.class);
-        Uri data = Uri.parse(f.getRuta());
-        intent.putExtra("ruta", data);
         intent.putExtra("posicion", position);
         startActivity(intent);
     }
