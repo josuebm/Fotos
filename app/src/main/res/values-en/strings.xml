@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Fotos</string>
+    <string name="action_ordenar">Sort</string>
+    <string name="orden_fecha">Date</string>
+    <string name="orden_nombre">Title</string>
+    <string name="orden_tamano">Size</string>
+    <string name="primera_foto">This is the first picture in the gallery</string>
+    <string name="ultima_foto">This is the last picture in the gallery</string>
+
+</resources>
